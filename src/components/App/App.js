@@ -10,11 +10,16 @@ class App extends React.Component {
   render() {
     return(
       <div className='App'>
-        <Navbar/>
-        <Splashpage/>
-        <Gallery/>
-        <Booking/>
-        <Bio/>
+        <head>
+          <title>Tattoo Artist V Fox</title>
+        </head>
+        <body>
+          <Navbar/>
+          <Splashpage/>
+          <Gallery/>
+          <Booking/>
+          <Bio/>
+        </body>
       </div>
     );
   }
