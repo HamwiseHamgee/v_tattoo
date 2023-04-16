@@ -9,12 +9,11 @@ import Splashpage from '../splashpage/splashpage';
 class App extends React.Component {
   render() {
     return(
-      <div className='App'>
-        <head>
-          <title>Tattoo Artist V Fox</title>
+      <div id='app'>
+        <head id='appHead'>
+        <Navbar/>
         </head>
-        <body>
-          <Navbar/>
+        <body id='appBody'>
           <Splashpage/>
           <Gallery/>
           <Booking/>
