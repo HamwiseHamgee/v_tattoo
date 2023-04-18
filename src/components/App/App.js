@@ -7,21 +7,29 @@ import Navbar from '../navbar/navbar';
 import Splashpage from '../splashpage/splashpage';
 
 class App extends React.Component {
-  render() {
-    return(
-      <div id='app'>
-        <head id='appHead'>
-        <Navbar/>
-        </head>
-        <body id='appBody'>
-          <Splashpage/>
-          <Gallery/>
-          <Booking/>
-          <Bio/>
-        </body>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div id='app'>
+				<header id='appHead'>
+					<Navbar />
+				</header>
+				<body id='appBody'>
+					<div className='pageContainer'>
+						<Splashpage />
+					</div>
+					<div className='pageContainer'>
+						<Gallery />
+					</div>
+					<div className='pageContainer'>
+						<Booking />
+					</div>
+					<div className='pageContainer'>
+						<Bio />
+					</div>
+				</body>
+			</div>
+		);
+	}
 }
 
 // function App() {
