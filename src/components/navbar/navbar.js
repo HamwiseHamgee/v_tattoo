@@ -1,29 +1,46 @@
 import React from 'react';
 import './navbar.css';
 
-class Navbar extends React.Component {
-	navElement() {
-		return (
-			<ul>
-				<li>Gallery</li>
-				<li>Booking</li>
-				<li>Bio</li>
-			</ul>
-		);
-	}
+const Navbar = () => {
+	function dropdown() {
+		function showDropdown() {
+			document.getElementById('dropdownContent').classList.toggle('show');
+		}
 
-	dropdown() {
+		window.onclick = function (event) {
+			if (!event.target.matches('#dropdownButton')) {
+				let dropdowns = document.getElementById('dropdownContent');
+				let i;
+				for (i = 0; i < dropdowns.length; i++) {
+					let openDropdown = dropdowns[i];
+					if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					}
+				}
+			}
+		};
+
 		return (
-			<div>
-				[Nav Button]
-				{this.navElement()}
+			<div className='dropdown' id='dropdownContainer'>
+				<button onClick={showDropdown()} id='dropdownButton'>
+					Make this a hamburger icon
+				</button>
+				<div id='dropdownContent' className='show'>
+					<a href='#' className='dropdownLink' id='drpdwnGallery'>
+						Gallery
+					</a>
+					<a href='#' className='dropdownLink' id='drpdwnBooking'>
+						Booking
+					</a>
+					<a href='#' className='dropdownLink' id='drpdwnBio'>
+						Bio
+					</a>
+				</div>
 			</div>
 		);
 	}
 
-	render() {
-		return <>{this.dropdown()}</>;
-	}
-}
+	return <>{dropdown()}</>;
+};
 
 export default Navbar;

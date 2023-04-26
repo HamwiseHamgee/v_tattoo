@@ -1,14 +1,12 @@
 import React from "react";
 import './gallery.css';
 
-class Gallery extends React.Component {
-    render() {
+const Gallery = () => {
         return(
             <div className='gallery'>
                 <p>Gallery goes here</p>
             </div>
         );
-    };
 };
 
 export default Gallery;

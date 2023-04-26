@@ -1,8 +1,7 @@
 import React from "react";
 import './booking.css';
 
-class Booking extends React.Component {
-    render() {
+const Booking = () => {
         return(
             <div id='bookingDiv'>
                 <h2 id='bookingTitle'>Booking</h2>
@@ -11,7 +10,6 @@ class Booking extends React.Component {
                 <p>vfoxx.booking@gmail.com</p>
             </div>
         );
-    }
 };
 
 export default Booking;

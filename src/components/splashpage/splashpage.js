@@ -2,8 +2,7 @@ import React from 'react';
 import './splashpage.css';
 import splashDecoration from '../../assets/images/splashpageBackground.png';
 
-class Splashpage extends React.Component {
-	render() {
+function Splashpage() {
 		return (
 			<div id='splashpage'>
 				<img src={splashDecoration} 
@@ -13,7 +12,6 @@ class Splashpage extends React.Component {
 				<h2>Tattoo Artist</h2>
 			</div>
 		);
-	}
 }
 
 export default Splashpage;

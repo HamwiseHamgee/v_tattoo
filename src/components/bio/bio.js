@@ -2,8 +2,7 @@ import React from 'react';
 import './bio.css';
 import headshot from '../../assets/images/vHeadshot.png';
 
-class Bio extends React.Component {
-	render() {
+const Bio = () => {
 		return (
 			<div id='bio'>
 				<h1>V Fox</h1>
@@ -37,7 +36,6 @@ class Bio extends React.Component {
 				<img src={headshot} alt='Headshot of V Fox'/>
 			</div>
 		);
-	}
 }
 
 export default Bio;
