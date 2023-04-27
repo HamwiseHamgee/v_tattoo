@@ -7,13 +7,16 @@ const Bio = () => {
 			<div id='bio'>
 				<h1>V Fox</h1>
 				<h2>They/Them</h2>
-				<p>
-					V has been tattooing in the Detroit region since 2015. They
-					work in black ink only, and specialize in fine line, detail
-					work. They have a preference for skulls, animals, small
-					floral, geometric and patterned works. In their free time
-					they enjoy their cats, hanging with their partner and
-					nature.
+				<div>
+					<p>
+						V has been tattooing in the Detroit region since 2015. They
+						work in black ink only, and specialize in fine line, detail
+						work. They have a preference for skulls, animals, small
+						floral, geometric and patterned works. In their free time
+						they enjoy their cats, hanging with their partner and
+						nature.
+					</p>
+				
 					<p>
 						Be sure to like and follow My Little Needle’s&nbsp;
 						<a href='https://www.facebook.com/mylittleneedletattoos'>
@@ -32,7 +35,7 @@ const Bio = () => {
 						</a>
 						.
 					</p>
-				</p>
+				</div>
 				<img src={headshot} alt='Headshot of V Fox'/>
 			</div>
 		);
