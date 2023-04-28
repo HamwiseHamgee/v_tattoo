@@ -1,5 +1,6 @@
 import React from 'react';
 import './navbar.css';
+import hamburger_icon from '../../assets/images/hamburger_icon.svg';
 
 const Navbar = () => {
 	// function dropdown() {
@@ -27,31 +28,46 @@ const Navbar = () => {
 	// 	);
 	// }
 
-	const handleScroll = (e) => {
-		console.log(`${e.currentTarget.id} got clicked`);
+
+	const handleScrollToElement = (e) => {
+		alert(`${e.currentTarget.id} got clicked`);
+
+		
 	}
 
 	return(
-		<div className='dropdown' id='dropdownContainer'>
-				<button  id='dropdownButton'>
-					Make this a hamburger icon
+		<div className='drpdwn' id='drpdwnContainer'>
+			<span>
+				<button  id='drpdwnButton'>
+					<img src={hamburger_icon} alt='Menu icon'></img>
 				</button>
-				<div id='dropdownContent' className='show'>
-					<a  
-						onClick={handleScroll}
-						className='dropdownLink' 
-						id='drpdwnGallery'
+			</span>
+			<nav id='navContent' className='show'>
+				<ol>
+					<li  
+						onClick={handleScrollToElement}
+						className='navLink' 
+						id='navGallery'
 					>
 						Gallery
-					</a>
-					<a href='#' className='dropdownLink' id='drpdwnBooking'>
+					</li>
+					<li
+						onClick={handleScrollToElement}
+						className='navLink' 
+						id='navGallery'
+					>
 						Booking
-					</a>
-					<a href='#' className='dropdownLink' id='drpdwnBio'>
+					</li>
+					<li 
+						onClick={handleScrollToElement} 
+						className='navLink' 
+						id='navLink'
+					>
 						Bio
-					</a>
-				</div>
-			</div>
+					</li>
+				</ol>
+			</nav>
+		</div>
 	);
 };
 
