@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './navbar.css';
 import hamburger_icon from '../../assets/images/hamburger_icon.svg';
 import instagram from '../../assets/images/instagram.svg';
@@ -12,7 +12,6 @@ const Navbar = () => {
 		} else {
 			setShowNav(false)
 		};
-		
 	};
 
 	return (
@@ -28,6 +27,8 @@ const Navbar = () => {
 };
 
 const NavContent = () => {
+	
+	// const handleClickScroll = useRef();
 
 	const handleScrollToElement = (e) => {
 		alert(`${e.currentTarget.id} got clicked`);

@@ -19,10 +19,10 @@ function AllComponents() {
                 <div className='pageContainer' id='galleryContainer'>
                     <Gallery />
                 </div>
-                <div className='pageContainer'>
+                <div className='pageContainer' id='bookingContainer'>
                     <Booking />
                 </div>
-                <div className='pageContainer'>
+                <div className='pageContainer' id='bioContainer'>
                     <Bio />
                 </div>
             </body>
