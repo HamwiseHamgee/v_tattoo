@@ -12,7 +12,7 @@
 	background-color: #2980b9;
 }
 
-#dropdownContainer {
+#drpdwnContainer {
 	position: relative;
 	display: inline-block;
 }
@@ -33,6 +33,7 @@
     display: block;
 }
 
-.navLink:hover {background-color: #ddd;}
-
-.show {display:block;}
+.navLink:hover {
+	background-color: #ddd;
+	cursor: pointer;
+}

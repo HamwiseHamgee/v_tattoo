@@ -11,22 +11,17 @@ import NotFound from '../notFound/notFound';
 
 function App() {
 	return (
-
-		
-	<BrowserRouter >
-        {/* <header>
-            <Routes>
-                <Route path='/' element={<Navbar />} />
-            </Routes>
-        </header> */}
-		<div className='App'>
-			<Routes>
-				<Route path='/' element={<AllComponents />} />
-				<Route path='*' element={<NotFound />} />
-			</Routes>
-		</div>
-	</BrowserRouter>
-
+		<BrowserRouter>
+			<div className='App'>
+				<Routes>
+					<Route path='/' element={<AllComponents />} />
+					<Route path='*' element={<NotFound />} />
+				</Routes>
+				<footer>
+					Icons by <a href='icons8.com'>Icons8</a>.
+				</footer>
+			</div>
+		</BrowserRouter>
 	);
 }
 
