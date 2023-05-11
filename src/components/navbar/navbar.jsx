@@ -1,17 +1,18 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './navbar.css';
 import hamburger_icon from '../../assets/images/hamburger_icon.svg';
-import instagram from '../../assets/images/instagram.svg';
+import instagram_icon from '../../assets/images/instagram_icon.svg';
 
 const Navbar = () => {
 
 	const [showNav, setShowNav] = useState(false);
+
 	const navClick = () => {
 		if (!showNav) {
-			setShowNav(true)
+			setShowNav(true);
 		} else {
-			setShowNav(false)
-		};
+			setShowNav(false);
+		}
 	};
 
 	return (
@@ -26,50 +27,57 @@ const Navbar = () => {
 	);
 };
 
-const NavContent = () => {
-	
-	// const handleClickScroll = useRef();
+const navScroll = (e) => {
 
-	const handleScrollToElement = (e) => {
-		alert(`${e.currentTarget.id} got clicked`);
+	
+
+	const clickedName = e.currentTarget.id;
+
+	let targetName = '';
+
+	if (clickedName === 'navSplashpage'){
+		targetName = 'splashpageContainer';
+	} else if (clickedName === 'navGallery') {
+		targetName = 'galleryContainer';
+	} else if (clickedName === 'navBooking') {
+		targetName = 'bookingContainer';
+	} else if (clickedName === 'navBio') {
+		targetName = 'bioContainer';
 	};
 
+
+	document.getElementById(targetName).scrollIntoView({ behavior: 'smooth' });
+
+};
+
+const NavContent = () => {
+
 	return (
-	<nav id='navContent'>
-		<ol>
-			<li
-				onClick={handleScrollToElement}
-				className='navLink'
-				id='navGallery'
-			>
-				Gallery
-			</li>
-			<li
-				onClick={handleScrollToElement}
-				className='navLink'
-				id='navBooking'
-			>
-				Booking
-			</li>
-			<li 
-				onClick={handleScrollToElement} 
-				className='navLink' 
-				id='navBio'
-			>
-				Bio
-			</li>
-			<li className='navLink' id='navInsta'>
-				<a href='https://www.instagram.com/v.ffoxx/'>
-				<img src={instagram} alt='Instagram Icon' id='instaIcon'></img>
-				</a>
-			</li>
-			{/* <li className='navLink' id='navFacebook'>
-				<a href='https://www.facebook.com/mylittleneedletattoos'>
-				<img src={facebook_icon} alt='Facebook Icon'></img>
-				</a>
-			</li> */}
-		</ol>
-	</nav>
+		<nav id='navContent'>
+			<ol>
+				<li onClick={navScroll} className='navLink' id='navSplashpage'>
+					Home
+				</li>
+				<li onClick={navScroll} className='navLink' id='navGallery'>
+					Gallery
+				</li>
+				<li onClick={navScroll} className='navLink' id='navBooking'>
+					Booking
+				</li>
+				<li onClick={navScroll} className='navLink' id='navBio'>
+					Bio
+				</li>
+				<li className='navLink' id='navInsta'>
+					<a href='https://www.instagram.com/v.ffoxx/'>
+						<img
+							src={instagram_icon}
+							alt='Instagram Icon'
+							id='instaIcon'
+						></img>
+					</a>
+				</li>
+			</ol>
+		</nav>
 	);
 };
 

@@ -13,7 +13,7 @@ function AllComponents() {
                 <Navbar />
             </header>
             <body id='appBody'>
-                <div className='pageContainer'>
+                <div className='pageContainer' id='splashpageContainer'>
                     <Splashpage />
                 </div>
                 <div className='pageContainer' id='galleryContainer'>
