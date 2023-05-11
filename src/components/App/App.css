@@ -1,14 +1,12 @@
-/* #appBody {
-	background-image: linear-gradient(180deg, black, #fffff2);
-} */
 
-#appBody,
+
+body,
 .pageContainer {
   max-width: 100vw;
-	height: 90vh;
+	height: 99vh;
 }
 
-#appBody {
+body {
   overflow: auto;
   scroll-snap-type: y mandatory;
   /* background: linear-gradient(180deg, black, #fffff2); */
